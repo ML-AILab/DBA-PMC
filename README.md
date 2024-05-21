@@ -1,4 +1,4 @@
-# DBA-PMC A Mutually Enhancing Dual-branch Architecture for Pathologic Myopia And Myopic Maculopathy Classification
+# DBA-PMC: A Mutually Enhancing Dual-branch Architecture for Pathologic Myopia And Myopic Maculopathy Classification
 Chucheng Chen, Zheng Gong, Zhuo Deng, Weihao Gao, Fang Li, **Lan Ma**, Lei Shao, Ruiheng Zhang, Wenbin Wei
 
 *The first two authors contribute equally to this work*
@@ -20,8 +20,30 @@ labels are corelative, two branches of the DBA-PMC can mutually promote the perf
  * NVIDIA GPU + CUDA
  * Python packages:
    ```
+   cd /DBA-PMC/
    pip install -r requirements.txt
    ```
 
-   
+# 2.Evaluation
+(1)Download the pretrained model from([Baidu Disk](https://pan.baidu.com/s/1aOio5sadSImCP4o4111mAw),code:pmc1) and place it to `/DBA-PMC/checkpoints/`.
 
+(2)To test trained model, run
+```
+cd /DBA-PMC/
+CUDA_VISIBLE_DEVICES=0 python test_image_ml.py --modelpath ./checkpoints/model_best_map.pth
+```
+
+# 3.Citation
+If this repo helps you, please consider citing our work:
+
+```
+@inproceedings{DBA-PMC2024,
+  title={DBA-PMC: A Mutually Enhancing Dual-branch Architecture for Pathologic Myopia And Myopic Maculopathy Classification},
+  author={Chucheng, Chen and Zheng, Gong and Zhuo, Deng and Weihao, Gao and Fang, Li and Lan, Ma and Lei, Shao and Ruiheng, Zhang and Wenbin, Wei},
+  booktitle={2024 IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--5},
+  year={2024},
+  organization={IEEE}
+}
+```
+If you have any questions, please contact me at [malan_ailab@163.com]().
